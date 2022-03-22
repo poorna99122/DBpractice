@@ -28,7 +28,16 @@ INSERT INTO INVENTORY VALUES ('1','POORNA');
 INSERT INTO INVENTORY VALUES ('2','CHANDRA');
 COMMIT;
 
-
-
-
 TRUNCATE TABLE INVENTORY;  -- Truncate doesn't destroys the whole table but it will delete the records in a table 
+
+
+
+
+-- Drop
+select * from INVENTORY; 
+DROP TABLE INVENTORY;
+COMMIT;
+
+
+
+
