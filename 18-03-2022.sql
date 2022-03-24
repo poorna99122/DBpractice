@@ -39,6 +39,9 @@ select first_name from customers where mobile_number='8185021930';
 select first_name as "FIRST NAME",LAST_NAME AS "LAST NAME" FROM CUSTOMERS;
 
 
+select * from customers;
+
+
 
 
 
