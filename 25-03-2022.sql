@@ -69,6 +69,22 @@ truncate table test_default;
 
 commit;
 
+------------------------------------------------------------------------
+
+create table test_unique(
+firstName varchar2(35) UNIQUE,
+secondName varchar2(35),
+lastName varchar2(35),
+phoneNumber number(10)
+);
+
+
+SELECT * FROM test_unique;
+
+INSERT INTO test_unique VALUES ('Poorna','Chandra','Rao',8185021930);
+INSERT INTO test_unique VALUES ('Poorna','Chandra','Rao',8185021930);
+
+------------------------------------------------------------------------
 
 
 
