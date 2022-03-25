@@ -27,26 +27,48 @@ commit;
 
 create table test_default (
 firstName varchar2(35),
-secondName varchar2(35),
+secondName varchar2(35) ,
 lastName varchar2(35),
-phoneNumber number(10) default '1111111111'
+phoneNumber number(10) 
 );
 
 
-select * from test_default;
+ALTER TABLE test_default
+MODIFY secondName default  'pcr';
+commit;
+
+insert  into test_default(firstName,secondName,lastName,phoneNumber) values('poorna','','rao',8185021930);
+
+
+
+
+
+
+select * from test_default; 
+
+TRUNCATE TABLE test_default;
+COMMIT;
 
 insert  into test_default values('poorna','chandra','rao','');
 
 
-CREATE TABLE demo_tbl
-(
-salary number(8,2) DEFAULT 9500,
-hire_date DATE DEFAULT '01-JAN-2011' ,
-birthdate DATE DEFAULT SYSDATE
+create table test_employee (
+firstName varchar2(35),
+secondName varchar2(35),
+lastName varchar2(35),
+phoneNumber number(10) NOT NULL CHECK(LENGTH(phoneNumber)>5)
 );
 
+insert  into test_employee values('poorna','chandra','rao',818502);
 
-select * from demo_tbl;
+DROP TABLE test_employee;
+
+select * from test_employee;
+truncate table test_default;
+
+
+commit;
+
 
 
 
